@@ -9,34 +9,57 @@
     body { font-family: sans-serif; padding: 2rem; }
     .lang-switch { position: absolute; top: 20px; right: 20px; }
     .lang-switch img { width: 30px; margin-left: 10px; cursor: pointer; }
-    .content { max-width: 600px; margin: auto; text-align: center; }
+    .content { max-width: 600px; margin: auto; text-align: center; padding-top: 120px; line-height: 1.5;}
+    #greeting {
+  font-size: 1.8rem;margin-bottom: 0.5rem; word-break: keep-all;
+}
+
+#keywords {
+  font-size: 1.2rem;
+  color: #666;
+  white-space: nowrap;
+  overflow-x: auto;
+}
     .links a { margin: 0 10px; }
   </style>
   <script>
     const texts = {
-      en: { intro: "Hi, I'm Evie. I love data, design, and development.", email: "Email me at: jylai68@gmail.com" },
-      zh: { intro: "嗨，我是 Evie。我熱愛資料、設計與開發。", email: "聯絡信箱：jylai68@gmail.com" },
-      de: { intro: "Hallo, ich bin Evie. Ich liebe Daten, Design und Entwicklung.", email: "E-Mail: jylai68@gmail.com" },
-      yue: { intro: "哈囉，我係 Evie。我鍾意數據、設計同埋開發。", email: "電郵聯絡：jylai68@gmail.com" }
-    };
-    function switchLang(lang) {
-      document.getElementById('intro').textContent = texts[lang].intro;
-      document.getElementById('email').textContent = texts[lang].email;
-    }
+  en: {
+    greeting: "Hi, I'm Evie.",
+    keywords: "Data | Design | Development"
+  },
+  zh: {
+    greeting: "嗨，我是 Evie。",
+    keywords: "資料 | 設計 | 開發"
+  },
+  de: {
+    greeting: "Hallo, ich bin Evie.",
+    keywords: "Daten | Design | Entwicklung"
+  },
+  yue: {
+    greeting: "哈囉，我係 Evie。",
+    keywords: "數據 | 設計 | 開發"
+  }
+};
+
+function switchLang(lang) {
+  document.getElementById('greeting').textContent = texts[lang].greeting;
+  document.getElementById('keywords').textContent = texts[lang].keywords;
+}
   </script>
 </head>
 <body>
   <div class="lang-switch">
     <img src="gb.png" onclick="switchLang('en')" title="English" />
-    <img src="cn.png" onclick="switchLang('zh')" title="中文" />
     <img src="de.png" onclick="switchLang('de')" title="Deutsch" />
+    <img src="cn.png" onclick="switchLang('zh')" title="中文" />
     <img src="hk.png" onclick="switchLang('yue')" title="粵語" />
   </div>
 
   <div class="content">
-    <img src="profile.jpg" alt="Evie Lai" width="220" style="border-radius: 100%;" />
+    <img src="profile.jpg" alt="Evie Lai", style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;" />
     <h1 id="intro">Hi, I'm Evie. I love data, design, and development.</h1>
-    <p id="email">Know more about Angela. Coontact: jylai68@gmail.com </p>
+    <p id="email">Know more about Evie. Contact: jylai68@gmail.com </p>
     <div class="links">
       <a href="https://www.linkedin.com/in/laijingyi/" target="_blank">LinkedIn</a> |
       <a href="https://github.com/jingyeelai" target="_blank">GitHub</a> |
