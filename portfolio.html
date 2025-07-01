@@ -3,50 +3,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evie Lai | Portfolio</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-    h1, h2 { color: #333; }
-    code { background: #f0f0f0; padding: 2px 4px; }
-    pre { background: #f7f7f7; padding: 1rem; overflow-x: auto; }
-    a { color: #0077cc; }
+    body {
+      font-family: sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 2rem;
+      color: #212529;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .portfolio-card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .portfolio-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #212529;
+    }
+    .portfolio-card p {
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+    .portfolio-card .date {
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>Portfolio</h1>
-  <h2>🌍 Top 100 Hotels Worldwide</h2>
-  <pre><code>
-**Project Process and Methodology**
-- Web scraping top 100 hotels data from multiple travel websites
-- Data cleaning, normalization, and enrichment using Python pandas
-- Cluster analysis for segmentation
+  <div class="container">
+    <h1>Evie Lai | Portfoli</h1>
 
-**Data Source**
-- Booking.com
-- TripAdvisor
-- Google Maps reviews
+    <div class="portfolio-card">
+      <h2>Top 100 Hotels Worldwide</h2>
+      <p>This project identifies and ranks the top 100 hotels globally using public data scraped from top travel platforms. The analysis covers methodology, data sources, and visualization techniques to highlight standout features in luxury and customer satisfaction.</p>
+      <p class="date">June 1, 2025</p>
+    </div>
 
-**Challenges**
-- Inconsistent review formats
-- Duplicate entries
-- Language barriers in customer reviews
-
-**Solutions**
-- Regex patterns for normalization
-- Fuzzy matching for deduplication
-- Translation API for standardizing text
-
-**Technologies Used**
-- Python, pandas, BeautifulSoup, scikit-learn
-- MySQL for storage
-- Tableau for visualization
-
-**Visualization Showcase**
-- Interactive hotel map (Tableau)
-- Customer satisfaction heatmap
-- Rating vs. price scatterplot
-  </code></pre>
-
-  <p><a href="index.html">← Back to home</a></p>
+    <div class="portfolio-card">
+      <h2>Retail Consumer Behavior Dashboard</h2>
+      <p>A dynamic dashboard that tracks retail purchase behavior segmented by user profiles. Key focus areas include time-series analysis, segmentation clustering, and storytelling through data visualization.</p>
+      <p class="date">May 15, 2025</p>
+    </div>
+  </div>
 </body>
 </html>
