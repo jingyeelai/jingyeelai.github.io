@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top 100 Hotels Worldwide | Evie Lai</title>
+  <title> Travel+Leisure World's Best 100 Hotels 2022 | Evie Lai</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
@@ -39,7 +39,7 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 0.3rem;
     }
-    ul {
+    ul, ol {
       padding-left: 1.2rem;
     }
     a {
@@ -63,6 +63,17 @@
   border-radius: 50%;
   object-fit: cover;
 }
+.highlight-blue {
+      font-weight: bold;
+      color: #007bff;
+    }
+    .keyfindings-img {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }    
   </style>
 </head>
 <body>
@@ -74,66 +85,67 @@
 
     <h1>Top 100 Hotels Worldwide</h1>
     <div class="date">June 1, 2025</div>
-    <p>The “Top 100 Hotels Worldwide” is a comprehensive data analysis and visualization project aimed at identifying the highest-rated hotels across continents based on online reviews, price tiers, and geographic locations.</p>
+    <p>The “Travel+Leisure World's Best 100 Hotels 2022” is a comprehensive data analysis and visualization project aimed at identifying the highest-rated hotels across continents based on online reviews, price tiers, and geographic locations.</p>
 
     <ul>
       <li><strong>Roles:</strong> Data Analyst, Visualization Designer</li>
       <li><strong>Year:</strong> 2022</li>
-      <li><strong>Tools Used:</strong> Python, pandas, Tableau, MySQL</li>
+      <li><strong>Tools Used:</strong> Python, pandas MySQL</li>
       <li><strong>GitHub:</strong> <a href="#">https://github.com/jingyeelai/Top100hotel</a></li>
     </ul>
 
     <h2>Motivation</h2>
-    <p>Stay-cation is a popular way to travel
-during the COVID. It means that people
-choose a nice local hotel to get the feel
-of travel, but without going anywhere
-else. This might not be something new
-for hotel experience seekers, who take
-the hotel as the major part of their trip.
-Our motivation is to help those hotel-
-orientated travellers to get an insight
-into the list Travel + Leisure World's
-Best Hotels 2022 for better decision-
-making.</p>
+    <p>Stay-cation became popular during COVID, where travelers choose premium local hotels to simulate a travel experience. Our project aims to assist hotel-oriented travelers by analyzing the Travel + Leisure World's Best Hotels 2022 list.</p>
 
-    <h2>Project Process and Methodology</h2>
+    <h2>Target</h2>
+    <ul>
+      <li>Visualize the locations and features of the top 100 hotels.</li>
+      <li>Compare pricing variability among top-ranked hotels.</li>
+      <li>Analyze customer feedback and sentiment versus ranking.</li>
+      <li>Explore how hotel attributes relate to their rankings.</li>
+    </ul>
+
+    <h2>Data Sources</h2>
+    <ul>
+      <li><strong>Travel+Leisure World's Best 100 Hotels 2022:</strong> <a href="https://www.kaggle.com/datasets/narmelan/travelleisure-worlds-best-hotels-2022" target="_blank">Kaggle dataset</a></li>
+      <li><strong>Reviews & Ratings:</strong> <a href="https://www.tripadvisor.com" target="_blank">TripAdvisor.com</a> via Scrapfly API</li>
+      <li><strong>Additional Hotels:</strong> Non-top 100 hotels for baseline comparison</li>
+    </ul>
+    
+    <h2>Methodology</h2>
     <ol>
-      <li><strong>Data Collection:</strong> Scraped hotel listings and reviews from Booking.com, TripAdvisor, and Google Maps.</li>
-      <li><strong>Cleaning and Standardization:</strong> Removed duplicates, normalized rating systems, and translated multilingual content.</li>
-      <li><strong>Analysis:</strong> Performed cluster analysis to segment hotels and identified standout attributes across regions.</li>
-      <li><strong>Visualization:</strong> Created dashboards to present findings, highlight customer satisfaction, and pricing trends.</li>
+      <li>Scraping and merging data from TripAdvisor.</li>
+      <li>Handling missing prices and averaging multi-night data.</li>
+      <li>Manual augmentation using hotel websites for missing info.</li>
+      <li>Text extraction from descriptions and review sentiment via SpacyTextBlob.</li>
+      <li>Bootstrap sentiment scoring and correlation analysis.</li>
     </ol>
 
-    <h2>Data Source</h2>
+   <h2>Analysis Highlights</h2>
     <ul>
-      <li><strong>Booking.com:</strong> Hotel reviews and metadata</li>
-      <li><strong>TripAdvisor:</strong> Customer feedback and ratings</li>
-      <li><strong>Google Maps:</strong> Geo-location and travel accessibility</li>
+      <li>Map visualizations and price-size-country dot plots.</li>
+      <li>Correlation matrix for score, size, price, rating, and sentiment.</li>
+      <li>WordClouds to summarize key themes in descriptions.</li>
+      <li>Sentiment comparison between top 100 and random hotels.</li>
     </ul>
 
-    <h2>Challenges</h2>
+    <h2>Key Findings</h2>
+    <p>Click to enlarge:</p>
+    <img src="keyfindings.jpg" alt="Key Findings Chart" class="keyfindings-img" />
+
+    <h2>Future Work</h2>
     <ul>
-      <li><strong>Inconsistent Formats:</strong> Different rating scales and review languages.</li>
-      <li><strong>Duplicate Listings:</strong> Merged data across platforms required fuzzy matching.</li>
+      <li>Standardize <span class="highlight-blue">prices</span> over a fixed stay window.</li>
+      <li>Refine <span class="highlight-blue">reviews</span> selection based on language and time.</li>
+      <li>Better <span class="highlight-blue">amenities</span> coverage via improved source merging.</li>
+      <li>Encode <span class="highlight-blue">categorical</span> variables and normalize values for more robust correlation.</li>
     </ul>
 
-    <h2>Solutions</h2>
-    <ul>
-      <li><strong>Regex-based Cleaning:</strong> Standardized fields such as location and review format.</li>
-      <li><strong>Fuzzy Matching:</strong> Applied fuzzy logic to combine similar listings.</li>
-    </ul>
-
-    <h2>Technologies Used</h2>
-    <ul>
-      <li>Python (data processing and scraping)</li>
-      <li>pandas, scikit-learn</li>
-      <li>Tableau (visualization)</li>
-      <li>MySQL (data storage)</li>
-    </ul>
 
     <h2>Visualization Showcase</h2>
     <p>Includes interactive maps, ratings vs. pricing scatterplots, and filterable dashboards.</p>
+   <p><a href="https://github.com/jingyeelai/Top100hotel" target="_blank">🔗 Click here to view the full notebook</a></p>
+  
   </div>
 </body>
 </html>
