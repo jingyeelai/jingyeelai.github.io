@@ -49,10 +49,29 @@
     a:hover {
       text-decoration: underline;
     }
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.nav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
   </style>
 </head>
 <body>
   <div class="container">
+<div class="top-nav" onclick="window.location.href='index.html'">
+  <img src="profile.jpg" alt="Evie Lai" class="nav-avatar" />
+  <span>Evie Lai's Portfolio</span>
+</div>
+
     <h1>Top 100 Hotels Worldwide</h1>
     <div class="date">June 1, 2025</div>
     <p>The “Top 100 Hotels Worldwide” is a comprehensive data analysis and visualization project aimed at identifying the highest-rated hotels across continents based on online reviews, price tiers, and geographic locations.</p>
@@ -63,6 +82,20 @@
       <li><strong>Tools Used:</strong> Python, pandas, Tableau, MySQL</li>
       <li><strong>GitHub:</strong> <a href="#">https://github.com/jingyeelai/Top100hotel</a></li>
     </ul>
+
+    <h2>Motivation</h2>
+    <p>Stay-cation is a popular way to travel
+during the COVID. It means that people
+choose a nice local hotel to get the feel
+of travel, but without going anywhere
+else. This might not be something new
+for hotel experience seekers, who take
+the hotel as the major part of their trip.
+Our motivation is to help those hotel-
+orientated travellers to get an insight
+into the list Travel + Leisure World's
+Best Hotels 2022 for better decision-
+making.</p>
 
     <h2>Project Process and Methodology</h2>
     <ol>
