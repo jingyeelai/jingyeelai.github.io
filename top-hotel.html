@@ -140,9 +140,19 @@
       <li><span class="highlight-blue">Prices</span> are very much dependent on dates and hotel policies. We would need to figure out
 a better logic for consistency. For example, find a future date with possible availabilities
 for all hotels and get an average per night price for five days.</li>
-      <li>Refine <span class="highlight-blue">reviews</span> selection based on language and time.</li>
-      <li>Better <span class="highlight-blue">amenities</span> coverage via improved source merging.</li>
-      <li>Encode <span class="highlight-blue">categorical</span> variables and normalize values for more robust correlation.</li>
+      <li>The language for retrieving reviews is limited to only English and the date of the reviews is
+not put into consideration. <span class="highlight-blue">Reviews</span> from diverse languages should be retrieved and
+processed. The reviews might have to be grouped by annual as well.</li>
+      <li> We planned to analyse the correlation between<span class="highlight-blue">amenities</span> and the ranking scores.
+However, the amenities data we scraped from tripadvisor.com include only basic
+amenities. Those special amenities that fit special themes and make hotels stand out
+were excluded. We also noticed that there is more information about amenities on
+booking.com. Due to the time constraints of this project, we were not able to scrape more
+data. In the future, additional data from other relevant websites would be beneficial for a
+more comprehensive analysis.</li>
+      <li>Numerical <span class="highlight-blue">variables</span> haven’t presented strong relation with the ranking score.
+Methodology for encoding categorical variables should be included, along with the
+normalization of the numerical data, for further correlation analysis.</li>
     </ul>
 
     <p>Includes interactive maps, ratings vs. pricing scatterplots, and filterable dashboards.</p>
